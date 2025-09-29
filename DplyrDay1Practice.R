@@ -51,7 +51,11 @@ starwars %>%
   arrange(mass) %>% 
   select(name, species, homeworld)
 
-
+starwars %>% 
+  select(homeworld, height) %>% 
+  filter(height >= 180) %>% 
+  arrange(homeworld) %>%
+  print(n = 100)
 
 # --------------------------------------------------
 # Reflection Questions:
@@ -62,6 +66,6 @@ starwars %>%
 # b) Who is the tallest human character in the dataset?
 #   Darth Vader
 # c) Which homeworld has the most characters taller than 180 cm?
-#   Kashyyyk 
+#   Naboo
 # d) Does the character with the highest BMI surprise you? Why or why not?
 #   Yes, because it's a droid
